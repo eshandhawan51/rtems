@@ -1,0 +1,23 @@
+﻿#  COPYRIGHT (c) 2020
+#  On-Line Applications Research Corporation (OAR).
+#
+# SPDX-License-Identifier: BSD-2-Clause
+#
+
+This file describes the directives and concepts tested by this test set.
+
+test set name:  psxgetcpuclockid 1
+
+Directives:
+  Pthread_getcpuclockid()
+
+Concepts:
+
++ This test exercises the getcpuclockid methods.
+
++ For pthread_getcpuclockid it created a pthread using pthread_create and
+ then finds the clockid_t of that thread then used gettime() add a pause of .5 seconds
+ and then ends the thread.
+ After the thread is ended it again tried to find the clockid_t of the thread to 
+ check for ESRCH exception.    
+

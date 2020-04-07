@@ -488,6 +488,15 @@ psxgetattrnp01_CPPFLAGS = $(AM_CPPFLAGS) $(TEST_FLAGS_psxgetattrnp01) \
 	$(support_includes) -I$(top_srcdir)/include
 endif
 
+if TEST_psxgetcpuclockid01
+psx_tests += psxgetcpuclockid01
+psx_screens += psxgetcpuclockid01/psxgetcpuclockid01.scn
+psx_docs += psxgetcpuclockid01/psxgetcpuclockid01.doc
+psxgetcpuclockid01_SOURCES = psxgetcpuclockid01/init.c 
+psxgetcpuclockid01_CPPFLAGS = $(AM_CPPFLAGS) $(TEST_FLAGS_psxgetcpuclockid01) \
+	$(support_includes) 
+endif
+
 if TEST_psxgetrusage01
 psx_tests += psxgetrusage01
 psx_screens += psxgetrusage01/psxgetrusage01.scn
